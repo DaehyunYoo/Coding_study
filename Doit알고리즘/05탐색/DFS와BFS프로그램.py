@@ -8,11 +8,14 @@ A = [[] for _ in range(N+1)]
 
 for _ in range(M):
     s, e = map(int, input().split())
-    A[s] = A.append(e)
-    A[e] = A.append(s)
+    A[s].append(e)
+    A[e].append(s)
+    # print(f'A[{s}]:{A[s]}')
+    # print(f'A[{e}]:{A[e]}')
 
 for i in range(N+1):
     A[i].sort()
+    # print(f'A[i]:{A[i]}')
 
 
 def DFS(v):
