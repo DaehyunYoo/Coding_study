@@ -1,6 +1,3 @@
-# 음식물 피하기
-# 백준1743
-
 from collections import deque
 
 N, M, K = map(int, input().split())
@@ -19,32 +16,28 @@ for _ in range(K):
 result = 0
 
 def BFS(i, j):
-    global cnt
-    
     queue = deque()
     queue.append((i, j))
     visited[i][j] = True
-    cnt = 1
+    cnt = 1  # 시작 지점 포함하여 카운트 시작
     
     while queue:
         x, y = queue.popleft()
         for k in range(4):
-            nx = i + dx[k]
-            ny = j + dy[k]
+            nx = x + dx[k]  # 수정: nx 계산 시 x 사용
+            ny = y + dy[k]  # 수정: ny 계산 시 y 사용
             if 0 <= nx < N and 0 <= ny < M:
-                if not visited[nx][ny] and graph[nx][ny] == 1: # 해당 노드가 1인 경우만 밟기
+                if not visited[nx][ny] and graph[nx][ny] == 1:
                     visited[nx][ny] = True
                     cnt += 1
                     queue.append((nx, ny))
-    
     return cnt
                     
 
 for i in range(N):
     for j in range(M):
         if graph[i][j] == 1 and not visited[i][j]:
-            cnt = 0
-            cnt = BFS(i, j)
+            cnt = BFS(i, j)  # BFS 함수에서 cnt를 초기화하므로 별도 초기화 불필요
             result = max(result, cnt)
 
-print(result + 1)
+print(result)  # 마지막 결과 출력 수정
