@@ -1,3 +1,6 @@
+# 음식물 피하기
+# 백준 1743번
+
 from collections import deque
 
 N, M, K = map(int, input().split())
