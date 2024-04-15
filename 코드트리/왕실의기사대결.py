@@ -23,10 +23,9 @@ nc = [0 for _ in range(Max_N)] # 이동 후 각 기사의 잠재적 열 위치
 dmg = [0 for _ in range(Max_N)] # 각 기사가 이동 중 받는 피해량
 visited = [False] * Max_N # 이동 여부 플래그
 
-
+# dir: 기사가 이동할 방향
 def try_movement(idx, dir):
     queue = deque()
-    is_pos = True
     
     # 이동 초기화: 모든 기사에 대한 피해, 이동 여부 초기화
     for i in range(1, N + 1):
@@ -70,7 +69,6 @@ def try_movement(idx, dir):
             queue.append(i)
         
     dmg[idx] = 0
-    
     return True
 
 # 기사 이동
