@@ -33,7 +33,7 @@ for _ in range(int(input())): # K
                     
     for i in range(1, V+1):
         if not visited[i]:
-            result = BFS(i, 1)
+            result = BFS(i, 1) # 
             if not result:
                 break
 
