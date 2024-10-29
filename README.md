@@ -1,6 +1,9 @@
 # Coding_study
 
 ## 알고리즘
+### 항해 99 코딩테스트준비 스터디(2024.10.28~)
+[TIL](https://dhy1.tistory.com/334) 
+
 ### 백준
 [백준](https://www.acmicpc.net/)  
 
