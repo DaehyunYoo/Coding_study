@@ -1,3 +1,6 @@
 .DS_Store
+<<<<<<< HEAD
 # 모든 csv 파일 무시
 *.csv
+=======
+>>>>>>> eaeb7fd189f907168e17aa6857b6367d78d8ebfb
