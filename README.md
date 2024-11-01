@@ -10,5 +10,6 @@
 [프로그래머스 코드 기록](https://dhy1.tistory.com/)
 
 ## 데이터 분석
+- [데이터분석 테스트 가이드라인](데이터분석/README.md)
 - [Kaggle](https://www.kaggle.com/)
 - [Dacon](https://dacon.io/)
