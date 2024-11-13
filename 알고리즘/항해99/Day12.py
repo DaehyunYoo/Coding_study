@@ -49,7 +49,7 @@ for i in range(H):
         for k in range(M):
             if graph[i][j][k] == 0:  # 익지 않은 토마토가 있다면
                 print(-1)
-                break
+                exit()
             day = max(day, graph[i][j][k])
 
 # 처음 토마토가 1이었으므로 실제 일수는 최댓값 - 1
